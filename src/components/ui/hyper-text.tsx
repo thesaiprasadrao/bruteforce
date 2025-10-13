@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion, MotionProps } from "motion/react"
 
 import { cn } from "@/lib/utils"
@@ -22,6 +22,8 @@ interface HyperTextProps extends MotionProps {
   startOnView?: boolean
   /** Whether to trigger animation on hover */
   animateOnHover?: boolean
+  /** Where hovering should trigger the animation: on this element or on its parent */
+  hoverScope?: "self" | "parent"
   /** Custom character set for scramble effect. Defaults to uppercase alphabet */
   characterSet?: CharacterSet
 }
@@ -40,6 +42,7 @@ export function HyperText({
   as: Component = "div",
   startOnView = false,
   animateOnHover = true,
+  hoverScope = "self",
   characterSet = DEFAULT_CHARACTER_SET,
   ...props
 }: HyperTextProps) {
@@ -54,12 +57,31 @@ export function HyperText({
   const iterationCount = useRef(0)
   const elementRef = useRef<HTMLElement>(null)
 
-  const handleAnimationTrigger = () => {
+  const handleAnimationTrigger = useCallback(() => {
     if (animateOnHover && !isAnimating) {
       iterationCount.current = 0
       setIsAnimating(true)
     }
-  }
+  }, [animateOnHover, isAnimating])
+
+  // Attach hover listeners depending on scope
+  useEffect(() => {
+    if (!animateOnHover) return
+
+    const target: HTMLElement | null =
+      hoverScope === "parent"
+        ? (elementRef.current?.parentElement as HTMLElement | null)
+        : (elementRef.current as HTMLElement | null)
+
+    if (!target) return
+
+    const onEnter = () => handleAnimationTrigger()
+    target.addEventListener("mouseenter", onEnter)
+
+    return () => {
+      target.removeEventListener("mouseenter", onEnter)
+    }
+  }, [animateOnHover, hoverScope, handleAnimationTrigger])
 
   // Handle animation start based on view or delay
   useEffect(() => {
@@ -129,7 +151,6 @@ export function HyperText({
     <MotionComponent
       ref={elementRef}
       className={cn("overflow-hidden py-2 text-4xl font-bold", className)}
-      onMouseEnter={handleAnimationTrigger}
       {...props}
     >
       <AnimatePresence>
