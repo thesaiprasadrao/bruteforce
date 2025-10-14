@@ -48,7 +48,7 @@ export default function AboutSection() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Track 1 - Artificial Intelligence</h3>
             <p className="text-sm text-foreground/80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium possimus aperiam magnam delectus facilis ea quam id placeat, similique nobis quas! Dolore ab vero rem voluptates laborum perferendis tempora!
+              Explore the cutting-edge world of AI and machine learning. Build intelligent applications that leverage data to solve complex problems and create innovative solutions.
             </p>
           </div>
 
@@ -68,7 +68,7 @@ export default function AboutSection() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Track 2 - Business & Entrepreneurship</h3>
             <p className="text-sm text-foreground/80">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur odio officia omnis aspernatur illum laudantium quos eius reiciendis possimus deserunt, facere magnam ab suscipit, excepturi placeat explicabo minus, in eos.
+              Dive into the business side of technology. Develop solutions that address market needs, focusing on innovation, scalability, and real-world impact.
             </p>
           </div>
         </div>
