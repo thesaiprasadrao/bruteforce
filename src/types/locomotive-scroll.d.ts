@@ -1,6 +1,4 @@
 declare module "locomotive-scroll" {
-  import type { EasingPreset } from "locomotive-scroll";
-
   export interface LocomotiveScrollOptions {
     el: HTMLElement;
     smooth?: boolean;
@@ -11,7 +9,7 @@ declare module "locomotive-scroll" {
     getDirection?: boolean;
     getSpeed?: boolean;
     reloadOnContextChange?: boolean;
-    easing?: string | EasingPreset;
+    easing?: string;
   }
 
   export interface LocomotiveScrollInstance {

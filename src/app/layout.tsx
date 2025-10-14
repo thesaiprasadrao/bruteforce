@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
+import Cursor from "@/components/ui/cursor";
 
 export const metadata: Metadata = {
   title: "BruteForce",
@@ -22,6 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased`}>
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        {/* Global custom cursor */}
+        <Cursor />
       </body>
     </html>
   );

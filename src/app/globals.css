@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "locomotive-scroll/dist/locomotive-scroll.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -79,7 +80,19 @@
   50% {
     background-position: 100% 100%;}
   to {
-    background-position: 0% 0%;}}}
+    background-position: 0% 0%;}}
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);}
+  to {
+    transform: translateX(calc(-100% - var(--gap)));}}
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);}
+  to {
+    transform: translateY(calc(-100% - var(--gap)));}}}
 
 :root {
   --radius: 0.625rem;
@@ -158,5 +171,42 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Hide the native cursor only on devices that support hover (non-touch) */
+@media (hover: hover) and (pointer: fine) {
+  html, body, * {
+    cursor: none !important;
+  }
+}
+
+/* ---------------------------- */
+/* Smooth scroll engine helpers */
+/* ---------------------------- */
+
+[data-scroll-container] {
+  /* The engine manages transforms; prevent native scrollbars within */
+  overflow: hidden;
+}
+
+/* Only animate when engine is active and user allows motion */
+@media (prefers-reduced-motion: no-preference) {
+  html.scroll-engine [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: transform, opacity;
+  }
+  html.scroll-engine .is-inview[data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Parallax elements hint */
+@media (prefers-reduced-motion: no-preference) {
+  [data-scroll][data-scroll-speed] {
+    will-change: transform;
   }
 }

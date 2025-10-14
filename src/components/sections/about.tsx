@@ -29,6 +29,7 @@ export default function AboutSection() {
         <p className="text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto text-center">
           BruteForce is an inter-college hackathon designed to inspire innovation, teamwork, and creative problem-solving among students. It provides a platform for participants to showcase their technical and business-oriented skills through real-world challenges.
         </p>
+        
         {/* Cards */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}

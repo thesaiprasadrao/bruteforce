@@ -1,18 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import {
-  AnimatedSpan,
-  Terminal,
-  TypingAnimation,
-} from "@/components/ui/terminal"
+import { Terminal, TypingAnimation } from "@/components/ui/terminal"
 import { Particles } from "@/components/ui/particles"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
 import { GlowButton } from "@/components/ui/glow-button"
 import AboutSection from "@/components/sections/about"
 import Countdown from "@/components/ui/countdown"
 import TimelineSection from "@/components/sections/timeline"
-// import SponsorsCardsSection from "@/components/sections/sponsors-cards"
+import SponsorsSection from "@/components/sections/sponsors";
+import HighlightsSection from "@/components/sections/highlights";
+import FAQ from "@/components/sections/faq/faq";
 
 export default function Home() {
   const [done, setDone] = useState(false)
@@ -70,10 +68,18 @@ export default function Home() {
           <div data-scroll-section>
             <TimelineSection />
           </div>
-          {/* <div data-scroll-section>
-            <SponsorsCardsSection />
-          </div> */}
-          
+          <div data-scroll-section>
+            <SponsorsSection />
+          </div>
+          <div data-scroll-section>
+            <HighlightsSection />
+          </div>
+          <div data-scroll-section>
+            <FAQ />
+          </div>
+          <div data-scroll-section className="w-full py-10 text-center text-sm text-foreground/60">
+              © 2025 BruteForce Hackathon. Organized by Udhbhava - Department of CSBS
+          </div>
         </>
       )}
     </>

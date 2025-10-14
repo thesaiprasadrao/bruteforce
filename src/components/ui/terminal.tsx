@@ -56,7 +56,7 @@ export const AnimatedSpan = ({
     if (sequence.activeIndex === itemIndex) {
       setHasStarted(true)
     }
-  }, [sequence?.activeIndex, sequence?.sequenceStarted, hasStarted, itemIndex])
+  }, [sequence, sequence?.activeIndex, sequence?.sequenceStarted, hasStarted, itemIndex])
 
   const shouldAnimate = sequence ? hasStarted : startOnView ? isInView : true
 
@@ -139,15 +139,8 @@ export const TypingAnimation = ({
 
     const startTimeout = setTimeout(() => setStarted(true), delay)
     return () => clearTimeout(startTimeout)
-  }, [
-    delay,
-    startOnView,
-    isInView,
-    started,
-    sequence?.activeIndex,
-    sequence?.sequenceStarted,
-    itemIndex,
-  ])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [delay, startOnView, isInView, started, sequence?.activeIndex, sequence?.sequenceStarted, itemIndex])
 
   useEffect(() => {
     if (!started) return
@@ -168,6 +161,7 @@ export const TypingAnimation = ({
     return () => {
       clearInterval(typingEffect)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [children, duration, started])
 
   return (
@@ -266,3 +260,4 @@ export const Terminal = ({
     </SequenceContext.Provider>
   )
 }
+          // Removed unused eslint-disable comment

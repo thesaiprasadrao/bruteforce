@@ -135,14 +135,18 @@ export const Particles: React.FC<ParticlesProps> = ({
       }
       window.removeEventListener("resize", handleResize)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [color])
 
   useEffect(() => {
+    // onMouseMove reads latest refs; deps per-field intentionally omitted
     onMouseMove()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mousePosition.x, mousePosition.y])
 
   useEffect(() => {
     initCanvas()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refresh])
 
   const initCanvas = () => {
@@ -320,16 +324,27 @@ export const Particles: React.FC<ParticlesProps> = ({
 
       {/* Centered title overlay (non-intrusive to animation) */}
       {overlay && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-          {subtitle ? <div className="mb-2 text-center">{subtitle}</div> : null}
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none" data-scroll data-reveal>
+          {subtitle ? (
+            <div className="mb-2 text-center" data-scroll data-reveal data-scroll-speed="0.5">
+              {subtitle}
+            </div>
+          ) : null}
 
           <h1
             className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white drop-shadow-[0_8px_24px_rgba(0,0,0,0.8)]"
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
+            data-scroll
+            data-reveal
+            data-scroll-speed="1.2"
           >
             {title}
           </h1>
-          {cta ? <div className="mt-4 pointer-events-auto">{cta}</div> : null}
+          {cta ? (
+            <div className="mt-4 pointer-events-auto" data-scroll data-reveal data-scroll-speed="0.8">
+              {cta}
+            </div>
+          ) : null}
         </div>
       )}
     </div>
