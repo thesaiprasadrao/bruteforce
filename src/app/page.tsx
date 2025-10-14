@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Terminal, TypingAnimation } from "@/components/ui/terminal"
+import { Terminal, TypingAnimation , AnimatedSpan } from "@/components/ui/terminal"
 import { Particles } from "@/components/ui/particles"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
 import { GlowButton } from "@/components/ui/glow-button"
@@ -21,12 +21,12 @@ export default function Home() {
         <div className="flex min-h-screen items-center justify-center">
           <Terminal onSequenceComplete={() => setDone(true)}>
             <TypingAnimation>Initializing BruteForce v1.0</TypingAnimation>
-            {/* <AnimatedSpan>✔ Loading core modules</AnimatedSpan>
+            <AnimatedSpan>✔ Loading core modules</AnimatedSpan>
             <AnimatedSpan>✔ Presented by Udbhava</AnimatedSpan>
-            <TypingAnimation>Connecting to DataBase...</TypingAnimation> */}
-            {/* <AnimatedSpan>✔ Event: BruteForce – Tagline</AnimatedSpan>
+            <TypingAnimation>Connecting to DataBase...</TypingAnimation>
+            <AnimatedSpan>✔ Event: BruteForce – Tagline</AnimatedSpan>
             <AnimatedSpan>✔ Date: 15th October 2025</AnimatedSpan>
-            <AnimatedSpan>✔ Some info about hackathon</AnimatedSpan> */}
+            <AnimatedSpan>✔ Some info about hackathon</AnimatedSpan>
             <TypingAnimation>Launch sequence complete. Welcome Aboard👋</TypingAnimation>
           </Terminal>
         </div>
