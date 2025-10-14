@@ -44,6 +44,7 @@ interface ParticlesProps extends ComponentPropsWithoutRef<"div"> {
   vy?: number
   title?: string
   titleClassName?: string
+  tagline?: React.ReactNode
   subtitle?: React.ReactNode
   cta?: React.ReactNode
   overlay?: boolean
@@ -91,6 +92,7 @@ export const Particles: React.FC<ParticlesProps> = ({
   vy = 0.1,
   title = "BruteForce",
   titleClassName,
+  tagline,
   subtitle,
   cta,
   overlay = true,
@@ -341,6 +343,16 @@ export const Particles: React.FC<ParticlesProps> = ({
           >
             {title}
           </h1>
+          {tagline ? (
+            <div
+              className="mt-1 text-center text-lg sm:text-xl md:text-2xl font-medium text-white/80 max-w-3xl"
+              data-scroll
+              data-reveal
+              data-scroll-speed="1.1"
+            >
+              {tagline}
+            </div>
+          ) : null}
           {cta ? (
             <div className="mt-4 pointer-events-auto" data-scroll data-reveal data-scroll-speed="0.8">
               {cta}

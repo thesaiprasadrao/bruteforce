@@ -35,6 +35,10 @@ export default function Home() {
             <Particles
               title="BRUTEFORCE"
               titleClassName={`${digital7.className} tracking-[0.08em] hero-glow`}
+              tagline={<>
+                <span className="text-white/70">The Future Isn't Built , it's</span>{" "}
+                <span className="text-[#ac9ef9] font-semibold">BRUTEFORCED</span>
+              </>}
               subtitle={
                 <div className="flex flex-col items-center gap-3">
                   <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.88)]">
