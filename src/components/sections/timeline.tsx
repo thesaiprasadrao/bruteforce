@@ -26,7 +26,7 @@ const defaultEvents: TimelineEvent[] = [
     title: "Hackathon Day",
     date: "Oct 28, 2025",
     description:
-      "24 hours of building, mentoring, checkpoints, and lots of caffeine.",
+      "24 hours of building, mentoring, and learnings.",
   },
   {
     title: "Demos & Results",
@@ -34,12 +34,6 @@ const defaultEvents: TimelineEvent[] = [
     description:
       "Showtime! Final presentations, jury Q&A, and winners announcement.",
   },
-  {
-    title: "Hmm",
-    date: "Oct 28, 2025",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  }
 ]
 
 function Card({ className, children }: React.PropsWithChildren<{ className?: string }>) {
@@ -80,7 +74,12 @@ export default function TimelineSection({ events = defaultEvents }: TimelineSect
             return (
               <li key={ev.title} className="relative">
                 {/* Dot on the center line */}
-                <span className="absolute left-1/2 top-1/2 block size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400 ring-4 ring-violet-400/20" />
+                <span
+                  aria-hidden
+                  role="presentation"
+                  className="absolute left-1/2 top-1/2 block size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400 ring-4 ring-violet-400/20 animate-blink"
+                  style={{ animationDelay: `${(idx % 4) * 0.15}s` }}
+                />
 
                 <div className="grid grid-cols-1 items-center md:grid-cols-2">
                   {/* Left column */}
