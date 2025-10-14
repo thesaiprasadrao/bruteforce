@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { digital7 } from "./fonts";
 import "./globals.css";
 
 import { ClientRoot } from "@/components/providers/client-root";

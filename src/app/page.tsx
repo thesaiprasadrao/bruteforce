@@ -36,7 +36,7 @@ export default function Home() {
               title="BRUTEFORCE"
               titleClassName={`${digital7.className} tracking-[0.08em] hero-glow`}
               tagline={<>
-                <span className="text-white/70">The Future Isn't Built , it's</span>{" "}
+                <span className="text-white/70">The Future Isn&apos;t Built , it&apos;s</span>{" "}
                 <span className="text-[#ac9ef9] font-semibold">BRUTEFORCED</span>
               </>}
               subtitle={
