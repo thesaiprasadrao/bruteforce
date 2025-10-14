@@ -23,10 +23,10 @@ const defaultEvents: TimelineEvent[] = [
       "We review submissions and shortlist teams based on problem fit and ideas.",
   },
   {
-    title: "Hackathon Day",
+    title: "D-Day",
     date: "Oct 28, 2025",
     description:
-      "24 hours of building, mentoring, and learnings.",
+      "The day to code, build and Bruteforce .",
   },
   {
     title: "Demos & Results",

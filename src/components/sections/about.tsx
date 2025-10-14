@@ -27,7 +27,7 @@ export default function AboutSection() {
           </HyperText>
         </h2>
         <p className="text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto text-center">
-          BruteForce is an inter-college hackathon designed to inspire innovation, teamwork, and creative problem-solving among students. It provides a platform for participants to showcase their technical and business-oriented skills through real-world challenges.
+          BruteForce is an inter-college hackathon where ideas collide, codes compile, and innovation takes its own shape. It brings together sharp minds, restless curiosity, and a shared belief that any problem can be solved with enough logic. Think of it as a celebration of chaos, creativity, and the eternal truth of programming: if it doesn’t work the first time, brute force it.
         </p>
         
         {/* Cards */}

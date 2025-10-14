@@ -32,7 +32,7 @@ const POINTS = [
   {
     icon: "🏆",
     title: "Exciting rewards",
-    text: "₹20K prize pool, special domain awards, goodies, and certificates for all participants.",
+    text: "₹25K prize pool, special domain awards, goodies, and certificates for all participants.",
   },
   {
     icon: "🚀",

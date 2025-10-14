@@ -6,6 +6,7 @@ import { SPONSORS } from "@/data/sponsors";
 
 export default function SponsorsSection() {
   const single = SPONSORS.length === 1;
+  const pair = SPONSORS.length === 2;
 
   return (
     <section id="sponsors" className={`relative w-full py-24 ${single ? "min-h-screen flex items-center" : ""}`}>
@@ -35,6 +36,27 @@ export default function SponsorsSection() {
                   </div>
                 </a>
                 <div className="mt-6 text-base text-white/80 text-center">{s.name}</div>
+              </div>
+            ))}
+          </div>
+        ) : pair ? (
+          <div className="w-full flex flex-col md:flex-row md:justify-center gap-10 md:gap-16 items-center">
+            {SPONSORS.map((s) => (
+              <div key={s.name} className="flex flex-col items-center">
+                <a
+                  href={s.url ?? "#"}
+                  target={s.url ? "_blank" : undefined}
+                  rel={s.url ? "noopener noreferrer" : undefined}
+                  className="group rounded-2xl border border-white/15 transition-colors hover:border-[#ac9ef9] flex items-center justify-center"
+                  style={{ width: 420, height: 160 }}
+                >
+                  <div className="relative h-full w-full flex items-center justify-center p-6">
+                    <div className="relative h-24 w-64">
+                      <Image src={s.logo} alt={s.name} fill className="object-contain" sizes="420px" />
+                    </div>
+                  </div>
+                </a>
+                <div className="mt-4 text-base text-white/80 text-center font-medium">{s.name}</div>
               </div>
             ))}
           </div>

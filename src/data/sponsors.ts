@@ -11,4 +11,9 @@ export const SPONSORS: Sponsor[] = [
     logo: "/sponsors/derbi.jpg",
     url: "https://derbifoundation.com/",
   },
+  {
+    name: "Sagar Hospitals",
+    logo: "/sponsors/sagar-h.png",
+    url: "https://www.sagarhospitals.in/", 
+  },
 ]

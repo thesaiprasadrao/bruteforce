@@ -105,6 +105,17 @@
   }
 }
 
+/* Hero title soft border glow */
+.hero-glow {
+  /* Use multiple shadows for a diffused edge-only glow */
+  text-shadow:
+    0 0 6px #ac9ef9,
+    0 0 12px rgba(172,158,249,0.75),
+    0 0 28px rgba(172,158,249,0.5);
+  /* Slight stroke via paint fallback (WebKit only); keeps interior crisp */
+  -webkit-text-stroke: 1px rgba(172,158,249,0.35);
+}
+
 :root {
   --radius: 0.625rem;
   /* Make the global background black and text light */

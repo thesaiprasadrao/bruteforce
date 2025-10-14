@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
+import { digital7 } from "./fonts";
 import "./globals.css";
 
-import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
-import Cursor from "@/components/ui/cursor";
-
+import { ClientRoot } from "@/components/providers/client-root";
 export const metadata: Metadata = {
   title: "BruteForce",
   description: "BruteForce",
@@ -14,6 +13,7 @@ export const metadata: Metadata = {
   },
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,10 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
-        {/* Global custom cursor */}
-        <Cursor />
+      <body className={"antialiased"}>
+        <ClientRoot>{children}</ClientRoot>
       </body>
     </html>
   );

@@ -8,14 +8,11 @@ import React, {
 } from "react"
 
 import { cn } from "@/lib/utils"
+// import { digital7 } from "@/app/layout"
 
-interface MousePosition {
-  x: number
-  y: number
-}
-
-function MousePosition(): MousePosition {
-  const [mousePosition, setMousePosition] = useState<MousePosition>({
+interface MousePositionState { x: number; y: number }
+function MousePosition(): MousePositionState {
+  const [mousePosition, setMousePosition] = useState<MousePositionState>({
     x: 0,
     y: 0,
   })
@@ -46,6 +43,7 @@ interface ParticlesProps extends ComponentPropsWithoutRef<"div"> {
   vx?: number
   vy?: number
   title?: string
+  titleClassName?: string
   subtitle?: React.ReactNode
   cta?: React.ReactNode
   overlay?: boolean
@@ -92,6 +90,7 @@ export const Particles: React.FC<ParticlesProps> = ({
   vx = 0.1,
   vy = 0.1,
   title = "BruteForce",
+  titleClassName,
   subtitle,
   cta,
   overlay = true,
@@ -332,8 +331,10 @@ export const Particles: React.FC<ParticlesProps> = ({
           ) : null}
 
           <h1
-            className="text-6xl sm:text-7xl md:text-8xl font-extrabold text-white drop-shadow-[0_8px_24px_rgba(0,0,0,0.8)]"
-            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
+            className={cn(
+              "text-7xl sm:text-8xl md:text-9xl font-extrabold text-white",
+              titleClassName
+            )}
             data-scroll
             data-reveal
             data-scroll-speed="1.2"

@@ -5,6 +5,7 @@ import { Terminal, TypingAnimation , AnimatedSpan } from "@/components/ui/termin
 import { Particles } from "@/components/ui/particles"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
 import { GlowButton } from "@/components/ui/glow-button"
+import { digital7 } from "./fonts"
 import AboutSection from "@/components/sections/about"
 import Countdown from "@/components/ui/countdown"
 import TimelineSection from "@/components/sections/timeline"
@@ -32,6 +33,8 @@ export default function Home() {
         <>
           <section className="relative h-screen w-full overflow-hidden" data-scroll-section>
             <Particles
+              title="BRUTEFORCE"
+              titleClassName={`${digital7.className} tracking-[0.08em] hero-glow`}
               subtitle={
                 <div className="flex flex-col items-center gap-3">
                   <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.88)]">
@@ -42,7 +45,9 @@ export default function Home() {
                   </div>
                   
                 </div>
+
               }
+              
               cta={
                 <div className="flex flex-col items-center gap-4">
                   <a href="https://bruteforce.devfolio.co" target="_blank" rel="noopener noreferrer">
