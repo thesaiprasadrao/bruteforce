@@ -12,7 +12,7 @@ import TimelineSection from "@/components/sections/timeline"
 import SponsorsSection from "@/components/sections/sponsors";
 import HighlightsSection from "@/components/sections/highlights";
 import FAQ from "@/components/sections/faq/faq";
-
+import SocialSection from "@/components/sections/social"
 export default function Home() {
   const [done, setDone] = useState(false)
 
@@ -82,10 +82,14 @@ export default function Home() {
             <HighlightsSection />
           </div>
           <div data-scroll-section>
+            <SocialSection />
+          </div>
+          <div data-scroll-section>
             <FAQ />
           </div>
+        
           <div data-scroll-section className="w-full py-10 text-center text-sm text-foreground/60">
-              © 2025 BruteForce Hackathon. Organized by Udhbhava - Department of CSBS
+              © 2025 BruteForce Hackathon. Organized by Udhbhava - <a href="https://www.dsce.edu.in/academics/ug/csbs">Department of CSBS</a>
           </div>
         </>
       )}

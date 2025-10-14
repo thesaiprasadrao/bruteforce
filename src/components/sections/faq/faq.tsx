@@ -73,7 +73,7 @@ const DEFAULT_ITEMS: FAQItemProps[] = [
     answer: (
       <>
         <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-          You can contact our Student Coordinators - 
+          You can contact the Student Coordinators - 
           <a href="wa.me/+918660841074">Prakyat Shetty</a> ,<a href="wa.me/+918897748027">Gayatri </a>
           or reach out to us via any of these channels:
         </p>
