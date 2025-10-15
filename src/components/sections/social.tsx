@@ -17,15 +17,15 @@ export const SocialSection: React.FC = () => {
               </h2>
       <div className="flex gap-10">
         <div className="flex flex-col items-center gap-2">
-          <InstagramButton onClick={() => window.open("https://instagram.com/", "_blank")} />
+          <InstagramButton onClick={() => window.open("https://www.instagram.com/_udbhava/", "_blank")} />
           <span className="text-xs sm:text-sm text-white/60">Udbhava</span>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <LinkedInButton onClick={() => window.open("https://linkedin.com/", "_blank")} />
+          <LinkedInButton onClick={() => window.open("https://www.linkedin.com/company/dsce-cb", "_blank")} />
           <span className="text-xs sm:text-sm text-white/60">CSBS</span>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <InstagramButton onClick={() => window.open("https://instagram.com/", "_blank")} />
+          <InstagramButton onClick={() => window.open("https://www.instagram.com/csbs_dsce/", "_blank")} />
           <span className="text-xs sm:text-sm text-white/60">CSBS</span>
         </div>
       </div>
