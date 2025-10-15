@@ -57,6 +57,8 @@ export default function Home() {
                   target={new Date("2025-10-28T00:00:00+05:30")}
                   colors={["#ac9ef9", "#8b78f6", "#c9c1ff", "#6a5ae0"]}
                   speed={1.15}
+                  showLabels
+                  labels={["Days", "Hours", "Mins", "Sec"]}
                 />
               </div>
             </div>

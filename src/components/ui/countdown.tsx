@@ -8,6 +8,8 @@ export type CountdownProps = {
   className?: string
   colors?: string[]
   speed?: number
+  showLabels?: boolean
+  labels?: [string, string, string, string]
 }
 
 function getTimeParts(diffMs: number) {
@@ -29,6 +31,8 @@ export function Countdown({
   className = "",
   colors = ["#ac9ef9", "#8b78f6", "#c9c1ff", "#6a5ae0"],
   speed = 1,
+  showLabels = false,
+  labels = ["Days", "Hours", "Mins", "Sec"],
 }: CountdownProps) {
   const targetMs = useMemo(() => {
     if (target instanceof Date) return target.getTime()
@@ -49,24 +53,27 @@ export function Countdown({
   return (
     <div className={`flex flex-col items-center gap-2 ${className}`}>
       <div className="flex items-center gap-3 sm:gap-4">
-        <TimeBlock value={days} colors={colors} speed={speed} />
+        <TimeBlock value={days} colors={colors} speed={speed} label={showLabels ? labels[0] : undefined} />
         <Separator />
-        <TimeBlock value={hours} colors={colors} speed={speed} />
+        <TimeBlock value={hours} colors={colors} speed={speed} label={showLabels ? labels[1] : undefined} />
         <Separator />
-        <TimeBlock value={minutes} colors={colors} speed={speed} />
+        <TimeBlock value={minutes} colors={colors} speed={speed} label={showLabels ? labels[2] : undefined} />
         <Separator />
-        <TimeBlock value={seconds} colors={colors} speed={speed} />
+        <TimeBlock value={seconds} colors={colors} speed={speed} label={showLabels ? labels[3] : undefined} />
       </div>
     </div>
   )
 }
 
-function TimeBlock({ value, colors, speed }: { value: number; colors?: string[]; speed?: number }) {
+function TimeBlock({ value, colors, speed, label }: { value: number; colors?: string[]; speed?: number; label?: string }) {
   return (
     <div className="flex flex-col items-center">
       <AuroraText className="text-3xl sm:text-4xl md:text-5xl font-semibold tabular-nums" colors={colors} speed={speed}>
         {pad(value)}
       </AuroraText>
+      {label ? (
+        <span className="mt-1 text-[10px] sm:text-xs tracking-wide uppercase text-white/70 select-none">{label}</span>
+      ) : null}
     </div>
   )
 }
