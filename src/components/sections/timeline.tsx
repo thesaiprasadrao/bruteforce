@@ -67,7 +67,9 @@ export default function TimelineSection({ events = defaultEvents }: TimelineSect
         <header className="mb-12 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
             <HyperText
-            className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">Timeline</HyperText> </h2>
+            className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl"
+            aurora
+            >Timeline</HyperText> </h2>
           <p className="mt-2 text-sm text-white/70">What to expect and when</p>
         </header>
 

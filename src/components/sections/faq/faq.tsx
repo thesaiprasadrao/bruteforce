@@ -101,6 +101,7 @@ export default function FAQ({
             as="span"
             startOnView
             className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl"
+            aurora
           >
             {target}
           </HyperText>

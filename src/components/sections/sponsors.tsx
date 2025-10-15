@@ -13,7 +13,7 @@ export default function SponsorsSection() {
       <div className={`mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 ${single ? "flex flex-col items-center" : ""}`}>
         <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
           Our {"  "}
-          <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">
+          <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl" aurora>
             Sponsors
           </HyperText>
         </h2>

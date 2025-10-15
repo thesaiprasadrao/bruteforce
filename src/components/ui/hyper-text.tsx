@@ -26,6 +26,12 @@ interface HyperTextProps extends MotionProps {
   hoverScope?: "self" | "parent"
   /** Custom character set for scramble effect. Defaults to uppercase alphabet */
   characterSet?: CharacterSet
+  /** Enable aurora gradient effect on the text (color-only, no font change) */
+  aurora?: boolean
+  /** Colors for aurora gradient */
+  auroraColors?: string[]
+  /** Speed multiplier for aurora animation */
+  auroraSpeed?: number
 }
 
 const DEFAULT_CHARACTER_SET = Object.freeze(
@@ -44,6 +50,9 @@ export function HyperText({
   animateOnHover = true,
   hoverScope = "self",
   characterSet = DEFAULT_CHARACTER_SET,
+  aurora = false,
+  auroraColors = ["#ac9ef9", "#8b78f6", "#c9c1ff", "#6a5ae0"],
+  auroraSpeed = 1,
   ...props
 }: HyperTextProps) {
   const MotionComponent = motion.create(Component, {
@@ -157,7 +166,17 @@ export function HyperText({
         {displayText.map((letter, index) => (
           <motion.span
             key={index}
-            className={cn("font-mono", letter === " " ? "w-3" : "")}
+            className={cn(
+              "font-mono",
+              letter === " " ? "w-3" : "",
+              aurora ? "animate-aurora bg-clip-text text-transparent bg-[length:200%_auto]" : ""
+            )}
+            style={aurora ? {
+              backgroundImage: `linear-gradient(135deg, ${auroraColors.join(", ")}, ${auroraColors[0]})`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              animationDuration: `${10 / auroraSpeed}s`,
+            } as React.CSSProperties : undefined}
           >
             {letter.toUpperCase()}
           </motion.span>

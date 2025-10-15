@@ -10,7 +10,7 @@ export const SocialSection: React.FC = () => {
     >
       <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
                 Do follow us here for more  {"  "}
-                <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">
+                <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl" aurora>
                   Updates
                 </HyperText> {"  "}
               </h2>

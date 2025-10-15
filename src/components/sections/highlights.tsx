@@ -55,7 +55,7 @@ export default function HighlightsSection() {
       <div className="mx-auto w-full max-w-7xl px-6">
         <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
           Why should you  {"  "}
-          <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">
+          <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl" aurora>
             Register
           </HyperText> {"  "}
           ?
