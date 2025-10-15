@@ -22,10 +22,13 @@ export default function AboutSection() {
             BruteForce
           </HyperText>
         </h2>
-        <p className="text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto text-center">
+        {/* Mobile-specific about copy */}
+        <p className="block sm:hidden text-lg leading-relaxed max-w-3xl mx-auto text-center">
+          BruteForce is an inter-college hackathon where ideas collide, codes compile, and innovation takes shape. It unites sharp minds and restless curiosity in a celebration of creativity, chaos, and the ultimate programming truth: if it doesn&apos;t work the first time, brute-force it.
+        </p>
+        {/* Desktop/tablet copy (original) */}
+        <p className="hidden sm:block text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto text-center">
           BruteForce is an inter-college hackathon where ideas collide, codes compile, and innovation takes its own shape. It brings together sharp minds, restless curiosity, and a shared belief that any problem can be solved with enough logic. Think of it as a celebration of chaos, creativity, and the eternal truth of programming: if it doesn’t work the first time, brute force it.
-            {/* className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl"
-            aurora */}
         </p>
         
         {/* Cards */}
