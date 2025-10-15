@@ -28,7 +28,7 @@ const DEFAULT_ITEMS: FAQItemProps[] = [
     question: "Who can participate in the hackathon?",
     answer: (
       <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
-        The hackathon is open to undergraduate and graduate students from all
+        The hackathon is open to undergraduate students from all
         colleges. Teams (up to 3-4 members) are welcome to
         participate.
       </p>
@@ -46,7 +46,7 @@ const DEFAULT_ITEMS: FAQItemProps[] = [
     question: "How do I register and what are the fees?",
     answer: (
       <p className="text-muted-foreground mb-4 max-w-[600px]">
-        Registration is free. Just click here -  <a href="https://bruteforce.devfolio.co" target="_blank" rel="noopener noreferrer"> Devfolio</a>.
+        Registration is free. Just click here to register-  <a href="https://bruteforce.devfolio.co" target="_blank" rel="noopener noreferrer"> Devfolio</a>.
       </p>
     ),
   },
@@ -55,8 +55,7 @@ const DEFAULT_ITEMS: FAQItemProps[] = [
     answer: (
       <p className="text-muted-foreground mb-4 max-w-[580px]">
         Teams of up to 3-4 members are allowed. Prizes include cash awards,
-        certifications etc. Final prize details will be
-        announced closer to the event.
+        certifications etc. 
       </p>
     ),
   },
