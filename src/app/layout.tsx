@@ -3,6 +3,12 @@ import "./globals.css";
 
 import { ClientRoot } from "@/components/providers/client-root";
 import { Particles } from "@/components/ui/particles";
+import { Inter as FontInter } from "next/font/google";
+const inter = FontInter({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: "BruteForce",
   description: "BruteForce",
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"antialiased"}>
+      <body className={`antialiased ${inter.variable} font-sans`}>
         {/* Global particles background */}
         <div className="fixed inset-0 -z-10">
           <Particles
