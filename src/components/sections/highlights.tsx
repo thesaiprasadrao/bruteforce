@@ -22,7 +22,7 @@ const POINTS = [
   {
     icon: "⚙️",
     title: "Hands-on experience",
-    text: "Code, design, and develop real solutions in an 8-hour sprint round.",
+    text: "Code, design, and develop real solutions in a 12-hour sprint round.",
   },
   {
     icon: "🧭",

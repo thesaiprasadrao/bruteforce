@@ -3,6 +3,7 @@ import * as React from "react"
 import { InstagramButton } from "@/components/ui/instagram-button"
 import { LinkedInButton } from "@/components/ui/linkedin-button"
 import { HyperText } from "@/components/ui/hyper-text"
+import { EmailButton } from "../ui/email-icon"
 export const SocialSection: React.FC = () => {
   return (
     <section
@@ -13,7 +14,6 @@ export const SocialSection: React.FC = () => {
                 <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">
                   Updates
                 </HyperText> {"  "}
-                ?
               </h2>
       <div className="flex gap-10">
         <div className="flex flex-col items-center gap-2">

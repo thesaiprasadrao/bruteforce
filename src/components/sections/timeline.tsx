@@ -12,32 +12,27 @@ export type TimelineEvent = {
 const defaultEvents: TimelineEvent[] = [
   {
     title: "Registrations Open",
-    date: "Oct 15, 2025",
+    date: "Oct 16, 2025",
     description:
       "Kickoff for BruteForce! Form your team and submit your application on Devfolio.",
   },
   {
-    title: "Shortlisting",
+    title: "Registrations Close",
     date: "Oct 24, 2025",
     description:
-      "We review submissions and shortlist teams based on problem fit and ideas.",
+      "Time out! The submission window closes. ",
+  },
+  {
+    title: "Shortlisted Teams Announcement",
+    date: "Oct 27, 2025",
+    description:
+      "The submissions will be reviewed and the shortlisted teams will be notified through the mail.",
   },
   {
     title: "D-Day",
     date: "Oct 28, 2025",
     description:
-      "The day to code, build and Bruteforce .",
-  },
-  {
-    title: "Demos & Results",
-    date: "Oct 28, 2025",
-    description:
-      "Showtime! Final presentations, jury Q&A, and winners announcement.",
-  },{
-    title: "hmm",
-    date: "Oct 28, 2025",
-    description:
-      "hmmmmm.......",
+      "The day to Code , Build and BruteForce.",
   },
 ]
 
@@ -63,7 +58,10 @@ interface TimelineSectionProps {
 export default function TimelineSection({ events = defaultEvents }: TimelineSectionProps) {
   return (
     <section id="timeline" className="relative py-24">
-      {/* Vertical line removed as requested */}
+      {/* Mobile left vertical line */}
+      <div className="pointer-events-none absolute left-4 top-0 block h-full w-px bg-gradient-to-b from-transparent via-white/20 to-transparent md:hidden" />
+      {/* Center vertical line visible on md+ */}
+      <div className="pointer-events-none absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-white/20 to-transparent md:block" />
 
       <div className="mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
@@ -82,7 +80,7 @@ export default function TimelineSection({ events = defaultEvents }: TimelineSect
                 <span
                   aria-hidden
                   role="presentation"
-                  className="absolute left-4 top-1/2 block size-3 -translate-y-1/2 rounded-full bg-violet-400 ring-4 ring-violet-400/20 animate-blink"
+                  className="absolute left-0 md:left-1/2 top-1/2 block size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400 ring-4 ring-violet-400/20 animate-blink"
                   style={{ animationDelay: `${(idx % 4) * 0.15}s` }}
                 />
 

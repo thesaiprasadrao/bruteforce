@@ -112,7 +112,7 @@ export default function AboutSection() {
                   <h4 className="text-xl sm:text-2xl font-semibold">Development Sprint</h4>
                 </div>
                 <p className="mt-3 text-foreground/80 text-sm sm:text-base">
-                  8-hour intensive coding session to bring your idea to life with your team
+                  12-hour intensive coding session to bring your idea to life with your team
                 </p>
               </div>
             </MagicCard>

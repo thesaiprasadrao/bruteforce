@@ -74,7 +74,7 @@ const DEFAULT_ITEMS: FAQItemProps[] = [
       <>
         <p className="text-muted-foreground mb-4 max-w-[640px] text-balance">
           Feel free to contact any of the Student Coordinators - 
-          <a href="https://wa.me/+918660841074">Prakyat Shetty </a> , <a href="https://wa.me/+918897748027">Gayatri </a>
+          <a href="https://wa.me/+918792859708">Ujjwal </a> , <a href="https://wa.me/+918897748027">Gayatri </a>
           or reach out to us via any of these channels:
         </p>
         <div className="w-full flex justify-center">
