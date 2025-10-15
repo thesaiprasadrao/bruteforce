@@ -20,19 +20,16 @@ export default function PrizePoolSection() {
 				<div className="w-full flex justify-center">
 					<CometCard className="w-full max-w-xl md:max-w-2xl">
 					<CardSpotlight
-							className="relative w-full rounded-2xl bg-background/40 border border-white/10 p-8 sm:p-10 overflow-hidden"
+							className="relative w-full rounded-2xl bg-background/40 border border-white/10 px-6 sm:px-8 pt-4 sm:pt-6 pb-6 sm:pb-8 overflow-hidden"
 						color="#0b0b0b"
 						radius={420}
 					>
                         
 						<div className="relative z-[1]">
-							<div className="inline-flex items-center gap-2 mb-3">
-								<span className="text-sm uppercase tracking-wider text-foreground/70">Prize Pool</span>
-							</div>
-							<div className="mt-2">
-								<div className="text-4xl sm:text-5xl font-extrabold tracking-tight">₹ 25,000</div>
-								<p className="mt-2 text-sm text-foreground/80 max-w-prose text-justify leading-relaxed">
-							        The prize pool will be generously divided among the tracks and awarded to the idea with the most potential. Also the ones who  flourish with creativity and innovation will be awarded and appreciated
+							<div className="mt-0">
+								<div className="text-4xl sm:text-5xl font-extrabold tracking-tight text-center">₹ 25,000</div>
+								<p className="mt-2 text-sm sm:text-base text-foreground/80 max-w-prose text-left text-balance leading-relaxed">
+							        The prize pool will be generously divided among the tracks and awarded to the idea with the most potential. Also the ones who flourish with creativity and innovation will be awarded and appreciated.
 								</p>
 							</div>
 						</div>

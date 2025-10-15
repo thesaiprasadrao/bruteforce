@@ -53,6 +53,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="mt-3 sm:mt-4 transform-gpu scale-95 sm:scale-100">
+                <p>Hackathon Begins In:</p>
                 <Countdown
                   target={new Date("2025-10-28T00:00:00+05:30")}
                   colors={["#ac9ef9", "#8b78f6", "#c9c1ff", "#6a5ae0"]}
