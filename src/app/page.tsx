@@ -48,9 +48,13 @@ export default function Home() {
                 <span className="text-[#ac9ef9] font-semibold">BRUTEFORCED</span>
               </div>
               <div className="mt-4 w-full sm:w-auto max-w-xs sm:max-w-none">
-                <a className="inline-block w-full sm:w-auto" href="https://bruteforce.devfolio.co" target="_blank" rel="noopener noreferrer">
+                {/* <a className="inline-block w-full sm:w-auto" href="https://bruteforce.devfolio.co" target="_blank" rel="noopener noreferrer">
                   <GlowButton>Register Now</GlowButton>
-                </a>
+                </a> */}
+                <p className="hero-glow text-[#ac9ef9] text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide">
+                  Registrations Opening Soon
+                </p>
+      
               </div>
               <div className="mt-3 sm:mt-4 transform-gpu scale-95 sm:scale-100">
                 <p>Hackathon Begins In:</p>
