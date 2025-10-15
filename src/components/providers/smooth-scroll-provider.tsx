@@ -30,6 +30,7 @@ export default function SmoothScrollProvider({ children }: Props) {
 
   useEffect(() => {
     const reducedMotion = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isMobile = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
 
     if (!containerRef.current) return;
 
@@ -44,7 +45,7 @@ export default function SmoothScrollProvider({ children }: Props) {
     };
 
     const init = async () => {
-      if (reducedMotion) {
+      if (reducedMotion || isMobile) {
         // Respect reduced motion: don't initialize the engine
         document.documentElement.classList.remove("scroll-engine");
         return;
@@ -57,7 +58,8 @@ export default function SmoothScrollProvider({ children }: Props) {
         el: containerRef.current,
         smooth: true,
         multiplier: 1,
-        smartphone: { smooth: true },
+        // Explicitly disable smoothing on smartphones; we also skip init on small screens above.
+        smartphone: { smooth: false },
         tablet: { smooth: true },
         getDirection: true,
         getSpeed: true,
@@ -105,6 +107,7 @@ export default function SmoothScrollProvider({ children }: Props) {
     instance: instanceRef.current,
     scrollTo: (target, options) => {
       const reducedMotion = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isMobile = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
       const inst = instanceRef.current;
       if (inst) {
         inst.scrollTo(target, options);
@@ -113,10 +116,10 @@ export default function SmoothScrollProvider({ children }: Props) {
         let el: HTMLElement | null = null;
         if (typeof target === "string") el = document.querySelector(target) as HTMLElement | null;
         else if (typeof target === "number") {
-          window.scrollTo({ top: target, behavior: reducedMotion ? "auto" : "smooth" });
+          window.scrollTo({ top: target, behavior: reducedMotion || isMobile ? "auto" : "smooth" });
           return;
         } else el = target as HTMLElement | null;
-        if (el) el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+        if (el) el.scrollIntoView({ behavior: reducedMotion || isMobile ? "auto" : "smooth", block: "start" });
       }
     },
   }), []);

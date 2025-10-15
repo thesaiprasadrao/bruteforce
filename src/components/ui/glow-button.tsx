@@ -23,7 +23,7 @@ export const GlowButton = React.forwardRef<HTMLButtonElement, GlowButtonProps>(
           // colors/initial state
           "text-white/50 border-white/50 bg-transparent shadow-transparent",
           // hover & focus state (match provided CSS)
-          "hover:text-white hover:bg-[#ac9ef9] hover:border-[#f3f3f3] focus:text-white focus:bg-[#140084] focus:border-[#ff0000d2]",
+          "hover:text-white hover:bg-[#ac9ef9] hover:border-[#f3f3f3] focus:text-white focus:bg-[#ac9ef9] focus:border-[#ffffffd2]",
           // text glow on hover
           "hover:[text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#fff] focus:[text-shadow:0_0_5px_#fff,0_0_10px_#fff,0_0_20px_#fff]",
           // box glow on hover

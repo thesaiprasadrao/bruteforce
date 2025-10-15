@@ -66,7 +66,11 @@ export const AnimatedSpan = ({
       initial={{ opacity: 0, y: -5 }}
       animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: -5 }}
       transition={{ duration: 0.3, delay: sequence ? 0 : delay / 1000 }}
-      className={cn("grid text-sm font-normal tracking-tight", className)}
+      className={cn(
+        // Smaller text on mobile, scale up on larger screens
+        "grid text-xs sm:text-sm md:text-base font-normal tracking-tight",
+        className
+      )}
       onAnimationComplete={() => {
         if (!sequence) return
         if (itemIndex === null) return
@@ -167,7 +171,11 @@ export const TypingAnimation = ({
   return (
     <MotionComponent
       ref={elementRef}
-      className={cn("text-sm font-normal tracking-tight", className)}
+      className={cn(
+        // Smaller text on mobile, scale up on larger screens
+        "text-xs sm:text-sm md:text-base font-normal tracking-tight",
+        className
+      )}
       {...props}
     >
       {displayedText}
@@ -234,20 +242,37 @@ export const Terminal = ({
     <div
       ref={containerRef}
       className={cn(
-        "border-border bg-background z-0 h-full max-h-[400px] w-full max-w-lg rounded-xl border",
+        // Responsive sizing: allow more height on mobile via viewport and scale paddings
+        "border-border bg-background z-0 h-full w-full rounded-xl border overflow-hidden",
+        "max-h-[50vh] sm:max-h-[400px] md:max-h-[480px]",
+        // Responsive max width for better large-screen utilization while staying compact on mobile
+        "max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl",
+        // Keep border away from screen edges on small devices
+        "mx-4 sm:mx-0",
         className
       )}
       style={{ backgroundColor: "#000000" }}
     >
-      <div className="border-border flex flex-col gap-y-2 border-b p-4">
+      <div className="border-border flex flex-col gap-y-2 border-b p-2 sm:p-3 md:p-4">
         <div className="flex flex-row gap-x-2">
           <div className="h-2 w-2 rounded-full bg-red-500"></div>
           <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
           <div className="h-2 w-2 rounded-full bg-green-500"></div>
         </div>
       </div>
-      <pre className="p-4">
-        <code className="grid gap-y-1 overflow-auto font-mono text-green-400">{wrappedChildren}</code>
+      <pre className="p-3 sm:p-4 overflow-auto" aria-live="polite" aria-atomic="false" role="log">
+        <code
+          className={cn(
+            // Grid layout for lines, spacing between entries
+            "grid gap-y-1 font-mono text-green-400 leading-relaxed",
+            // Avoid horizontal scrolling on mobile by wrapping long content
+            "whitespace-pre-wrap break-words",
+            // Base font sizes responsive to screen width
+            "text-xs sm:text-sm md:text-base"
+          )}
+        >
+          {wrappedChildren}
+        </code>
       </pre>
     </div>
   )

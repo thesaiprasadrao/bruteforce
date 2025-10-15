@@ -7,10 +7,11 @@ import { HyperText } from "@/components/ui/hyper-text";
 export default function PrizePoolSection() {
 	return (
 		<section className="relative w-full py-24">
-			<div className="mx-auto w-full max-w-7xl px-6">
+			<div className="mx-auto w-full max-w-7xl px-6"> 
 				<h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
+                    Prize{" "}
 					<HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-white">
-						Prize Pool
+						Pool
 					</HyperText>
 				</h2>
 

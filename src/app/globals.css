@@ -213,6 +213,13 @@
   overflow: hidden;
 }
 
+/* On small screens when the smooth scroll engine is not active, allow native scrolling */
+@media (max-width: 640px) {
+  html:not(.scroll-engine) [data-scroll-container] {
+    overflow: visible;
+  }
+}
+
 /* Only animate when engine is active and user allows motion */
 @media (prefers-reduced-motion: no-preference) {
   html.scroll-engine [data-reveal] {
