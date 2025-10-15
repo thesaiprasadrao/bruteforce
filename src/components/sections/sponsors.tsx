@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { HyperText } from "@/components/ui/hyper-text";
 import { SPONSORS } from "@/data/sponsors";
-import { CometCard } from "@/components/ui/comet-card";
 
 export default function SponsorsSection() {
   const single = SPONSORS.length === 1;

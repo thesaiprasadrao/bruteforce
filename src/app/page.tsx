@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Terminal, TypingAnimation , AnimatedSpan } from "@/components/ui/terminal"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
-import { GlowButton } from "@/components/ui/glow-button"
 import { digital7 } from "./fonts"
 import AboutSection from "@/components/sections/about"
 import Countdown from "@/components/ui/countdown"

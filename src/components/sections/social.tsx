@@ -3,7 +3,6 @@ import * as React from "react"
 import { InstagramButton } from "@/components/ui/instagram-button"
 import { LinkedInButton } from "@/components/ui/linkedin-button"
 import { HyperText } from "@/components/ui/hyper-text"
-import { EmailButton } from "../ui/email-icon"
 export const SocialSection: React.FC = () => {
   return (
     <section
