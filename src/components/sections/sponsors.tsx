@@ -81,8 +81,8 @@ export default function SponsorsSection() {
           </div>
         )}
       </div>
-      <p className="mt-8 text-center text-sm text-white/80">
-        More sponsors coming soon ..
+      <p className="mt-8 text-center text-3xl text-white/80">
+        More sponsors coming soon ...
       </p>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Terminal, TypingAnimation , AnimatedSpan } from "@/components/ui/terminal"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
 import { digital7 } from "./fonts"
@@ -33,8 +34,24 @@ export default function Home() {
           <section className="relative min-h-[100svh] w-full overflow-hidden" data-scroll-section>
             <div className="absolute inset-0" />
             <div className="relative z-0 min-h-[100svh] w-full flex flex-col items-center justify-center text-center gap-2 sm:gap-3 md:gap-4 px-4 sm:px-6">
-              <div className="inline-flex items-center gap-2 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.88)]">
-                <span className="text-base sm:text-lg">🗓️</span>
+              {/* Udbhava arrangement */}
+              <div className="flex flex-col items-center gap-2 sm:gap-3 mb-3 sm:mb-5">
+                {/* Row: Udbhava text with logo on the right */}
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <p className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">Udbhava</p>
+                  <Image
+                    src="/udbhava-logo.png"
+                    alt="Udbhava logo"
+                    width={90}
+                    height={90}
+                    className="h-8 w-auto sm:h-10 md:h-12 opacity-95"
+                  />
+                </div>
+                {/* Row: Presents smaller */}
+                <p className="text-lg sm:text-xl md:text-2xl font-semibold tracking-wide">Presents</p>
+              </div>
+              <div className="inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1 bg-[rgba(255,255,255,0.02)] border border-[rgba(255,255,255,0.88)]">
+                <span className="text-sm sm:text-base">🗓️</span>
                 <AnimatedGradientText>
                   28th October 2025
                 </AnimatedGradientText>
