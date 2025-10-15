@@ -97,7 +97,13 @@ export default function FAQ({
       return (
         <>
           {t.slice(0, idx)}
-          <HyperText as="span" startOnView>{target}</HyperText>
+          <HyperText
+            as="span"
+            startOnView
+            className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl"
+          >
+            {target}
+          </HyperText>
           {t.slice(idx + target.length)}
         </>
       );

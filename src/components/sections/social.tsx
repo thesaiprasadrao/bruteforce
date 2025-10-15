@@ -2,15 +2,19 @@
 import * as React from "react"
 import { InstagramButton } from "@/components/ui/instagram-button"
 import { LinkedInButton } from "@/components/ui/linkedin-button"
-
+import { HyperText } from "@/components/ui/hyper-text"
 export const SocialSection: React.FC = () => {
   return (
     <section
       className="py-0 min-h-[40vh] w-full flex flex-col items-center gap-10 rounded-xl max-w-5xl mx-auto "
     >
-      <h2 className="text-center font-extrabold tracking-tight text-2xl sm:text-3xl md:text-4xl  ">
-        Do follow us here for more updates
-      </h2>
+      <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
+                Do follow us here for more  {"  "}
+                <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">
+                  Updates
+                </HyperText> {"  "}
+                ?
+              </h2>
       <div className="flex gap-10">
         <div className="flex flex-col items-center gap-2">
           <InstagramButton onClick={() => window.open("https://instagram.com/", "_blank")} />

@@ -16,7 +16,8 @@ export default function AboutSection() {
             as="span"
             startOnView 
             hoverScope="parent"
-            className="py-0 font-semibold"
+            className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl"
+
           >
             BruteForce
           </HyperText>
@@ -75,7 +76,7 @@ export default function AboutSection() {
             as="span"
             startOnView 
             hoverScope="parent"
-            className="py-0 font-semibold"
+            className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl"
           >
             Victory
           </HyperText>

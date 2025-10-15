@@ -33,6 +33,11 @@ const defaultEvents: TimelineEvent[] = [
     date: "Oct 28, 2025",
     description:
       "Showtime! Final presentations, jury Q&A, and winners announcement.",
+  },{
+    title: "hmm",
+    date: "Oct 28, 2025",
+    description:
+      "hmmmmm.......",
   },
 ]
 
@@ -58,17 +63,17 @@ interface TimelineSectionProps {
 export default function TimelineSection({ events = defaultEvents }: TimelineSectionProps) {
   return (
     <section id="timeline" className="relative py-24">
-      {/* Center vertical line */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
+      {/* Vertical line removed as requested */}
 
       <div className="mx-auto max-w-5xl px-4">
         <header className="mb-12 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
-            <HyperText>Timeline</HyperText> </h2>
+            <HyperText
+            className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">Timeline</HyperText> </h2>
           <p className="mt-2 text-sm text-white/70">What to expect and when</p>
         </header>
 
-        <ul className="space-y-16 md:space-y-20">
+        <ul className="space-y-12 sm:space-y-16 md:space-y-20">
           {events.map((ev, idx) => {
             const isLeft = idx % 2 === 0
             return (
@@ -77,13 +82,22 @@ export default function TimelineSection({ events = defaultEvents }: TimelineSect
                 <span
                   aria-hidden
                   role="presentation"
-                  className="absolute left-1/2 top-1/2 block size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-400 ring-4 ring-violet-400/20 animate-blink"
+                  className="absolute left-4 top-1/2 block size-3 -translate-y-1/2 rounded-full bg-violet-400 ring-4 ring-violet-400/20 animate-blink"
                   style={{ animationDelay: `${(idx % 4) * 0.15}s` }}
                 />
 
                 <div className="grid grid-cols-1 items-center md:grid-cols-2">
-                  {/* Left column */}
-                  <div className="md:pr-10">
+                  {/* Mobile-only: single stream attached to left stick */}
+                  <div className="md:hidden pl-10">
+                    <Card className="relative">
+                      <h3 className="text-base sm:text-lg font-semibold">{ev.title}</h3>
+                      <p className="mt-1 text-xs sm:text-sm text-white/70">{ev.date}</p>
+                      <p className="mt-3 text-sm text-white/80">{ev.description}</p>
+                    </Card>
+                  </div>
+
+                  {/* Desktop/tablet: alternate left/right */}
+                  <div className="hidden md:block md:pr-10">
                     {isLeft ? (
                       <Card>
                         <h3 className="text-lg md:text-xl font-semibold">{ev.title}</h3>
@@ -93,8 +107,7 @@ export default function TimelineSection({ events = defaultEvents }: TimelineSect
                     ) : null}
                   </div>
 
-                  {/* Right column */}
-                  <div className="md:pl-10">
+                  <div className="hidden md:block md:pl-10">
                     {!isLeft ? (
                       <Card>
                         <h3 className="text-lg md:text-xl font-semibold">{ev.title}</h3>
