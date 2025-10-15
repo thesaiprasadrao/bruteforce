@@ -22,11 +22,11 @@ export default function Home() {
         <div className="flex min-h-screen items-center justify-center">
           <Terminal onSequenceComplete={() => setDone(true)}>
             <TypingAnimation>Initializing BruteForce v1.0</TypingAnimation>
-            <AnimatedSpan>✔ Loading core modules</AnimatedSpan>
+            {/* <AnimatedSpan>✔ Loading core modules</AnimatedSpan>
             <AnimatedSpan>✔ Presented by Udbhava, CSBS dept </AnimatedSpan>
             <TypingAnimation>Connecting to DataBase...</TypingAnimation>
             <AnimatedSpan>✔ Date: 28th October 2025</AnimatedSpan>
-         <TypingAnimation>Launch sequence complete. Welcome Aboard👋</TypingAnimation>
+         <TypingAnimation>Launch sequence complete. Welcome Aboard👋</TypingAnimation> */}
           </Terminal>
         </div>
       ) : (

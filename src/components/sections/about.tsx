@@ -10,10 +10,7 @@ export default function AboutSection() {
       {/* Subtle particles background */}
       <motion.div
         className="mx-auto w-full max-w-7xl text-foreground/90"
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.8 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        
       >  
         <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold">
           About {"  "}
