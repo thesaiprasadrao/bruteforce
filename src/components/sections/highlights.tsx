@@ -48,6 +48,8 @@ const POINTS = [
 
 export default function HighlightsSection() {
   const id = useId();
+  const evenPoints = POINTS.filter((_, i) => i % 2 === 0);
+  const oddPoints = POINTS.filter((_, i) => i % 2 === 1);
   return (
     <section id={`highlights-${id}`} className="relative w-full py-24">
       <div className="mx-auto w-full max-w-7xl px-6">
@@ -60,17 +62,46 @@ export default function HighlightsSection() {
         </h2>
 
         <div className="mt-6">
-          <Marquee className="py-2" pauseOnHover repeat={6}>
-            {POINTS.map((p) => (
-              <div key={p.title} className="flex-shrink-0 w-[360px] max-w-[360px] h-[140px] mr-4 rounded-2xl bg-background/40 border border-white/10 p-6 flex items-start gap-4">
-                <div className="text-3xl leading-none">{p.icon}</div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-1">{p.title}</h3>
-                  <p className="text-sm text-foreground/80">{p.text}</p>
+          {/* Mobile: two rows moving in opposite directions */}
+          <div className="sm:hidden space-y-2">
+            <Marquee className="py-2 [--duration:18s]" pauseOnHover repeat={8}>
+              {evenPoints.map((p) => (
+                <div key={p.title} className="flex-shrink-0 w-[360px] max-w-[360px] h-[140px] mr-4 rounded-2xl bg-background/40 border border-white/10 p-6 flex items-start gap-4">
+                  <div className="text-3xl leading-none">{p.icon}</div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1">{p.title}</h3>
+                    <p className="text-sm text-foreground/80">{p.text}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </Marquee>
+              ))}
+            </Marquee>
+            <Marquee className="py-2 [--duration:18s]" pauseOnHover reverse repeat={8}>
+              {oddPoints.map((p) => (
+                <div key={p.title} className="flex-shrink-0 w-[360px] max-w-[360px] h-[140px] mr-4 rounded-2xl bg-background/40 border border-white/10 p-6 flex items-start gap-4">
+                  <div className="text-3xl leading-none">{p.icon}</div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1">{p.title}</h3>
+                    <p className="text-sm text-foreground/80">{p.text}</p>
+                  </div>
+                </div>
+              ))}
+            </Marquee>
+          </div>
+
+          {/* Tablet/Desktop: single row as before */}
+          <div className="hidden sm:block">
+            <Marquee className="py-2" pauseOnHover repeat={6}>
+              {POINTS.map((p) => (
+                <div key={p.title} className="flex-shrink-0 w-[360px] max-w-[360px] h-[140px] mr-4 rounded-2xl bg-background/40 border border-white/10 p-6 flex items-start gap-4">
+                  <div className="text-3xl leading-none">{p.icon}</div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1">{p.title}</h3>
+                    <p className="text-sm text-foreground/80">{p.text}</p>
+                  </div>
+                </div>
+              ))}
+            </Marquee>
+          </div>
         </div>
       </div>
     </section>
