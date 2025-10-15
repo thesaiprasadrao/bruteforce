@@ -12,7 +12,7 @@ const POINTS = [
   {
     icon: "🧩",
     title: "Choose your domain",
-    text: "Pick between AI/ML or Business & Innovation and build what excites you most.",
+    text: "Pick between AI or Business & Innovation and build what excites you most.",
   },
   {
     icon: "🤝",
