@@ -37,8 +37,8 @@ const getRandomInt = (max: number): number => Math.floor(Math.random() * max)
 export function HyperText({
   children,
   className,
-  duration = 800,
-  delay = 0,
+  duration = 500,
+  delay = 3000,
   as: Component = "div",
   startOnView = false,
   animateOnHover = true,
@@ -101,7 +101,7 @@ export function HyperText({
           observer.disconnect()
         }
       },
-      { threshold: 0.1, rootMargin: "-30% 0px -30% 0px" }
+      { threshold: 0.1, rootMargin: "-20% 0px -20% 0px" }
     )
 
     if (elementRef.current) {

@@ -6,7 +6,7 @@ import { LinkedInButton } from "@/components/ui/linkedin-button"
 export const SocialSection: React.FC = () => {
   return (
     <section
-      className="py-24 min-h-[40vh] w-full flex flex-col items-center gap-10 rounded-xl max-w-5xl mx-auto "
+      className="py-0 min-h-[40vh] w-full flex flex-col items-center gap-10 rounded-xl max-w-5xl mx-auto "
     >
       <h2 className="text-center font-extrabold tracking-tight text-2xl sm:text-3xl md:text-4xl  ">
         Do follow us here for more updates

@@ -6,13 +6,11 @@ import { MagicCard } from "@/components/ui/magic-card"
 import { Brain, Briefcase } from "lucide-react"
 export default function AboutSection() {
   return (
-    <section className="relative w-full min-h-screen px-6 pt-16 pb-10 flex items-start justify-center">
+    <section className="relative w-full px-6 pt-4 sm:pt-8 pb-10 flex items-start justify-center">
       {/* Subtle particles background */}
       <motion.div
-        className="mx-auto w-full max-w-7xl text-foreground/90"
-        
-      >  
-        <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold">
+        className="mx-auto w-full max-w-7xl text-foreground/90">  
+  <h2 className="mb-4 sm:mb-8 text-center text-2xl sm:text-4xl md:text-4xl font-semibold">
           About {"  "}
           <HyperText
             as="span"
@@ -28,7 +26,7 @@ export default function AboutSection() {
         </p>
         
         {/* Cards */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div className="mt-6 sm:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="group relative rounded-xl bg-background/40 border border-foreground/10 p-6 overflow-hidden transition-transform duration-300 ease-out hover:-translate-y-1 hover:border-foreground/20 hover:shadow-[0_10px_30px_-10px_rgba(34,211,238,0.35)]">
             <ShineBorder
@@ -70,7 +68,7 @@ export default function AboutSection() {
           </div>
         </div>
         {/* Three Stages to Victory */}
-        <div className="mt-16">
+  <div className="mt-12 sm:mt-16">
            <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold">
           Three Stages to {"  "}
           <HyperText

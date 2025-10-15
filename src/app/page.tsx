@@ -13,6 +13,7 @@ import SponsorsSection from "@/components/sections/sponsors";
 import HighlightsSection from "@/components/sections/highlights";
 import FAQ from "@/components/sections/faq/faq";
 import SocialSection from "@/components/sections/social"
+import PrizePoolSection from "@/components/sections/prize-pool";
 export default function Home() {
   const [done, setDone] = useState(false)
 
@@ -72,8 +73,12 @@ export default function Home() {
           <div data-scroll-section>
             <AboutSection />
           </div>
+          
           <div data-scroll-section>
             <TimelineSection />
+          </div>
+          <div data-scroll-section>
+            <PrizePoolSection />
           </div>
           <div data-scroll-section>
             <SponsorsSection />
@@ -81,6 +86,7 @@ export default function Home() {
           <div data-scroll-section>
             <HighlightsSection />
           </div>
+
           <div data-scroll-section>
             <SocialSection />
           </div>
