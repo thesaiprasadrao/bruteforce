@@ -6,7 +6,7 @@ import { CometCard } from "../ui/comet-card";
 export default function PrizePoolSection() {
 	return (
 		<section className="relative w-full py-24">
-			<div className="mx-auto w-full max-w-7xl px-6"> 
+			<div className="mx-auto max-w-7xl px-6"> 
 				<h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
                     Prize{" "}
                     {/* <HyperText className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">
@@ -18,7 +18,7 @@ export default function PrizePoolSection() {
 				</h2>
 
 				<div className="w-full flex justify-center">
-					<CometCard className="w-full max-w-3xl md:max-w-4xl">
+					<CometCard className="w-full max-w-xl md:max-w-2xl">
 					<CardSpotlight
 							className="relative w-full rounded-2xl bg-background/40 border border-white/10 p-8 sm:p-10 overflow-hidden"
 						color="#0b0b0b"
@@ -31,8 +31,8 @@ export default function PrizePoolSection() {
 							</div>
 							<div className="mt-2">
 								<div className="text-4xl sm:text-5xl font-extrabold tracking-tight">₹ 25,000</div>
-								<p className="mt-2 text-sm text-foreground/80 max-w-md  text-center">
-							    Includes track awards and special recognitions for standout projects.
+								<p className="mt-2 text-sm text-foreground/80 max-w-prose text-justify leading-relaxed">
+							        The prize pool will be generously divided among the tracks and awarded to the idea with the most potential. Also the ones who  flourish with creativity and innovation will be awarded and appreciated
 								</p>
 							</div>
 						</div>

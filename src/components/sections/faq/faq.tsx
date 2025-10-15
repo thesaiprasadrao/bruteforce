@@ -112,16 +112,16 @@ export default function FAQ({
   };
   return (
     <Section className={className}>
-      <div className="max-w-container mx-auto flex flex-col items-center gap-8">
-        <h2 className="text-center text-3xl font-semibold sm:text-5xl">{renderTitleNodes(title)}</h2>
+      <div className="max-w-container mx-auto w-full px-6 flex flex-col items-center gap-6 sm:gap-8">
+        <h2 className="text-center text-2xl sm:text-4xl md:text-5xl font-semibold">{renderTitleNodes(title)}</h2>
         {items !== false && items.length > 0 && (
           <Accordion type="single" collapsible className="w-full max-w-[800px]">
             {items.map((item, index) => (
               <AccordionItem key={index} value={item.value || `item-${index + 1}`}>
-                <AccordionTrigger>
+                <AccordionTrigger className="text-base sm:text-lg py-3 sm:py-4">
                   <span>{item.question}</span>
                 </AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+                <AccordionContent className="text-sm sm:text-base">{item.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
