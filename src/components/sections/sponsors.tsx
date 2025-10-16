@@ -9,7 +9,7 @@ export default function SponsorsSection() {
   const pair = SPONSORS.length === 2;
 
   return (
-    <section id="sponsors" className={`relative w-full py-10 ${single ? "min-h-[70svh] flex items-center" : ""}`}>
+    <section id="sponsors" className={`relative w-full py-24 ${single ? "min-h-[70svh] flex items-center" : ""}`}>
       <div className={`mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 ${single ? "flex flex-col items-center" : ""}`}>
         <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
           Our {"  "}
@@ -82,7 +82,7 @@ export default function SponsorsSection() {
         )}
       </div>
       <p className="mt-8 text-center text-2xl sm:text-0.1xl text-white/80">
-        More sponsors coming soon ...
+        More sponsors coming soon...
       </p>
     </section>
   );

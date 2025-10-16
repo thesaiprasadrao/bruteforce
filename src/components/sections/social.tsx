@@ -6,7 +6,7 @@ import { HyperText } from "@/components/ui/hyper-text"
 export const SocialSection: React.FC = () => {
   return (
     <section
-      className="py-0 min-h-[40vh] w-full flex flex-col items-center gap-6 sm:gap-8 rounded-xl max-w-5xl mx-auto "
+      className="py-24 min-h-[40vh] w-full flex flex-col items-center gap-6 sm:gap-8 rounded-xl max-w-5xl mx-auto "
     >
       <h2 className="mb-1 sm:mb-2 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
                 Do follow us here for more  {"  "}

@@ -9,9 +9,6 @@ export default function PrizePoolSection() {
             <div className="mx-auto max-w-7xl px-6">
                 <h2 className="mb-8 sm:mb-10 text-center text-2xl sm:text-4xl md:text-4xl font-semibold text-white">
                     Prize{" "}
-                    {/* <HyperText className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl">
-                        Pool
-                    </HyperText> */}
                     <HyperText as="span" startOnView hoverScope="parent" className="py-0 font-semibold text-2xl sm:text-4xl md:text-4xl" aurora>
                         Pool
                     </HyperText>

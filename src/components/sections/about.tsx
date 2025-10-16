@@ -6,7 +6,7 @@ import { MagicCard } from "@/components/ui/magic-card"
 import { Brain, Briefcase } from "lucide-react"
 export default function AboutSection() {
   return (
-    <section className="relative w-full px-6 pt-4 sm:pt-8 pb-10 flex items-start justify-center">
+    <section className="relative w-full px-6 py-24 flex items-start justify-center">
       {/* Subtle particles background */}
       <motion.div
         className="mx-auto w-full max-w-7xl text-foreground/90">  
