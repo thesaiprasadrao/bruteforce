@@ -30,6 +30,9 @@ export default function AboutSection() {
         <p className="hidden sm:block text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto text-center">
           BruteForce is an inter-college hackathon where ideas collide, codes compile, and innovation takes its own shape. It brings together sharp minds, restless curiosity, and a shared belief that any problem can be solved with enough logic. Think of it as a celebration of chaos, creativity, and the eternal truth of programming: if it doesn’t work the first time, brute force it.
         </p>
+        <p className="text-0.5xl text-foreground/80 mt-2 text-center">
+              Choose your own problem statement from the given tracks and let your creativity run wild!
+            </p>
         
         {/* Cards */}
   <div className="mt-6 sm:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -71,6 +74,7 @@ export default function AboutSection() {
             <p className="text-sm text-foreground/80">
               Dive into the business side of technology. Develop solutions that address market needs, focusing on innovation, scalability, and real-world impact.
             </p>
+            
           </div>
         </div>
         {/* Three Stages to Victory */}
