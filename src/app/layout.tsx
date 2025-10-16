@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClientRoot } from "@/components/providers/client-root";
 import { Particles } from "@/components/ui/particles";
 import { Inter as FontInter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 const inter = FontInter({
   subsets: ["latin"],
   variable: "--font-geist-sans",
