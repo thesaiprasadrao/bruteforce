@@ -13,6 +13,7 @@ import HighlightsSection from "@/components/sections/highlights";
 import FAQ from "@/components/sections/faq/faq";
 import SocialSection from "@/components/sections/social"
 import PrizePoolSection from "@/components/sections/prize-pool";
+import { GlowButton } from "@/components/ui/glow-button"
 export default function Home() {
   const [done, setDone] = useState(false)
 
@@ -42,9 +43,9 @@ export default function Home() {
                   <Image
                     src="/udbhava-logo.png"
                     alt="Udbhava logo"
-                    width={90}
-                    height={90}
-                    className="h-8 w-auto sm:h-10 md:h-12 opacity-95"
+                    width={100}
+                    height={100}
+                    className="h-10 w-auto sm:h-12 md:h-14 lg:h-16 opacity-95 relative -translate-y-0.5 sm:-translate-y-1 md:-translate-y-1.5"
                   />
                 </div>
                 {/* Row: Presents smaller */}
@@ -64,12 +65,12 @@ export default function Home() {
                 <span className="text-[#ac9ef9] font-semibold">BRUTEFORCED</span>
               </div>
               <div className="mt-4 w-full sm:w-auto max-w-xs sm:max-w-none">
-                {/* <a className="inline-block w-full sm:w-auto" href="https://bruteforce.devfolio.co" target="_blank" rel="noopener noreferrer">
+                <a className="inline-block w-full sm:w-auto" href="https://bruteforce.devfolio.co" target="_blank" rel="noopener noreferrer">
                   <GlowButton>Register Now</GlowButton>
-                </a> */}
-                <p className="hero-glow text-[#ac9ef9] text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide">
+                </a>
+                {/* <p className="hero-glow text-[#ac9ef9] text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide">
                   Registrations Opening Soon
-                </p>
+                </p> */}
       
               </div>
               <div className="mt-3 sm:mt-4 transform-gpu scale-95 sm:scale-100">
