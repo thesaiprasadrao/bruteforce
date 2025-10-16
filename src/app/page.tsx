@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Terminal, TypingAnimation , AnimatedSpan } from "@/components/ui/terminal"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
-import { digital7 } from "./fonts"
+import { digital7, cinzelDecorative } from "./fonts"
 import AboutSection from "@/components/sections/about"
 import Countdown from "@/components/ui/countdown"
 import TimelineSection from "@/components/sections/timeline"
@@ -38,7 +38,7 @@ export default function Home() {
               <div className="flex flex-col items-center gap-2 sm:gap-3 mb-3 sm:mb-5">
                 {/* Row: Udbhava text with logo on the right */}
                 <div className="flex items-center gap-2 sm:gap-3">
-                  <p className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">Udbhava</p>
+                  <p className={`${cinzelDecorative.className} text-3xl sm:text-4xl md:text-5xl font-bold text-white`}>Udbhava</p>
                   <Image
                     src="/udbhava-logo.png"
                     alt="Udbhava logo"
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
         
           <div data-scroll-section className="w-full py-10 text-center text-sm text-foreground/60">
-              © 2025 BruteForce Hackathon. Organized by Udhbhava - <a href="https://www.dsce.edu.in/academics/ug/csbs">Department of CSBS</a>
+              © 2025 BruteForce Hackathon. Organized by Udbhava - <a href="https://www.dsce.edu.in/academics/ug/csbs">Department of CSBS</a> - DSCE Bengaluru.
           </div>
         </>
       )}
