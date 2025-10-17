@@ -71,7 +71,7 @@ const DEFAULT_ITEMS: FAQItemProps[] = [
     question: "Do we get participation certificates?",
     answer: (
       <p className="text-muted-foreground mb-4 max-w-[580px]">
-        Yes, all the participants will get participation certificates
+        Yes, all the participants will get participation certificates.
       </p>
     ),
   },
