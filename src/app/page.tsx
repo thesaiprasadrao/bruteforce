@@ -2,10 +2,11 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Terminal, TypingAnimation , AnimatedSpan } from "@/components/ui/terminal"
+import { Terminal, TypingAnimation, AnimatedSpan } from "@/components/ui/terminal"
 import { AnimatedGradientText } from "@/components/ui/animated-gradient-text"
 import { digital7, cinzelDecorative } from "./fonts"
 import AboutSection from "@/components/sections/about"
+import EventHighlightsSection from "@/components/sections/event-highlights"
 import Countdown from "@/components/ui/countdown"
 import TimelineSection from "@/components/sections/timeline"
 import SponsorsSection from "@/components/sections/sponsors";
@@ -27,7 +28,7 @@ export default function Home() {
             <AnimatedSpan>✔ Presented by Udbhava, CSBS dept </AnimatedSpan>
             <TypingAnimation>Connecting to DataBase...</TypingAnimation>
             <AnimatedSpan>✔ Date: 28th October 2025</AnimatedSpan>
-         <TypingAnimation>Launch sequence complete. Welcome Aboard👋</TypingAnimation>
+            <TypingAnimation>Launch sequence complete. Welcome Aboard👋</TypingAnimation>
           </Terminal>
         </div>
       ) : (
@@ -71,7 +72,7 @@ export default function Home() {
                 {/* <p className="hero-glow text-[#ac9ef9] text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide">
                   Registrations Opening Soon
                 </p> */}
-      
+
               </div>
               <div className="mt-3 sm:mt-4 transform-gpu scale-95 sm:scale-100">
                 <p>Hackathon Begins In:</p>
@@ -83,8 +84,25 @@ export default function Home() {
                   labels={["Days", "Hours", "Mins", "Sec"]}
                 />
               </div>
+              <div
+          style={{
+            fontSize: "2em",
+            marginTop: "30px",
+            fontWeight: 500,
+            
+            transition: "opacity 1s ease-in-out",
+          }}
+        >
+          The hackathon has ended, scroll down to see highlights
+        </div>
+
+
+                      
             </div>
           </section>
+          <div data-scroll-section>
+            <EventHighlightsSection />
+          </div>
           <div data-scroll-section>
             <AboutSection />
           </div>
@@ -107,13 +125,13 @@ export default function Home() {
           <div data-scroll-section>
             <FAQ />
           </div>
-        
+
           <div data-scroll-section className="w-full py-10 text-center text-sm text-foreground/60">
-              © 2025 BruteForce Hackathon. Organized by Udbhava - <a href="https://www.dsce.edu.in/academics/ug/csbs">Department of CSBS</a> - DSCE Bengaluru.
+            © 2025 BruteForce Hackathon. Organized by Udbhava - <a href="https://www.dsce.edu.in/academics/ug/csbs">Department of CSBS</a> - DSCE Bengaluru.
           </div>
         </>
       )}
     </>
   )
 }
-    
+
