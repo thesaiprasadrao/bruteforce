@@ -215,13 +215,6 @@ const PhotoModal = ({
             className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200"
-            >
-              <X className="w-6 h-6" />
-            </button>
 
             {/* Previous Button */}
             <button
@@ -290,7 +283,7 @@ export default function EventHighlightsSection() {
 
   return (
     <>
-      <section className="relative w-full px-6 py-24 flex items-center justify-center overflow-hidden">
+      <section id="event-highlights" className="relative w-full px-6 py-24 flex items-center justify-center overflow-hidden">
         <motion.div className="mx-auto w-full max-w-7xl text-foreground/90">
           <div className="text-center mb-12">
             <h2 className="mb-4 text-2xl sm:text-4xl md:text-4xl font-semibold">

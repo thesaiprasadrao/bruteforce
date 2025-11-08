@@ -93,7 +93,7 @@ export default function Home() {
             transition: "opacity 1s ease-in-out",
           }}
         >
-          The hackathon has ended, scroll down to see highlights
+          The hackathon has ended, scroll down to see <a href="#event-highlights">highlights</a>
         </div>
 
 
