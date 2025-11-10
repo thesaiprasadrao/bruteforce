@@ -14,20 +14,28 @@ export const SocialSection: React.FC = () => {
                   Updates
                 </HyperText> {"  "}
         </h2>
-      <div className="flex gap-6 sm:gap-8">
-        <div className="flex flex-col items-center gap-2">
-          <InstagramButton onClick={() => window.open("https://www.instagram.com/_udbhava/", "_blank")} />
-          <span className="text-xs sm:text-sm text-white/60">Udbhava</span>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <LinkedInButton onClick={() => window.open("https://www.linkedin.com/company/dsce-cb", "_blank")} />
-          <span className="text-xs sm:text-sm text-white/60">CSBS</span>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <InstagramButton onClick={() => window.open("https://www.instagram.com/csbs_dsce/", "_blank")} />
-          <span className="text-xs sm:text-sm text-white/60">CSBS</span>
-        </div>
-      </div>
+      <div className="flex gap-6 sm:gap-8 items-center justify-center">
+  <div className="flex flex-col items-center gap-2">
+    <LinkedInButton onClick={() => window.open("https://www.linkedin.com/company/udbhava-csbs/", "_blank")} />
+    <span className="text-xs sm:text-sm text-white/60">Udbhava</span>
+  </div>
+  
+  <div className="flex flex-col items-center gap-2">
+    <InstagramButton onClick={() => window.open("https://www.instagram.com/_udbhava/", "_blank")} />
+    <span className="text-xs sm:text-sm text-white/60">Udbhava</span>
+  </div>
+
+  <div className="flex flex-col items-center gap-2">
+    <LinkedInButton onClick={() => window.open("https://www.linkedin.com/company/dsce-cb", "_blank")} />
+    <span className="text-xs sm:text-sm text-white/60">CSBS</span>
+  </div>
+
+  <div className="flex flex-col items-center gap-2">
+    <InstagramButton onClick={() => window.open("https://www.instagram.com/csbs_dsce/", "_blank")} />
+    <span className="text-xs sm:text-sm text-white/60">CSBS</span>
+  </div>
+</div>
+
     </section>
   )
 }
